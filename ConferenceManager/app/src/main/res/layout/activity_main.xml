@@ -9,8 +9,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.iit.conferencemanager.MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_marginTop="76dp"
+        android:id="@+id/editText1"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editText0"
+        android:layout_alignStart="@+id/editText0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Username"
+        android:ems="10"
+        android:layout_marginTop="31dp"
+        android:id="@+id/editText0"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

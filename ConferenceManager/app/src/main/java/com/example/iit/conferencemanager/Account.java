@@ -5,28 +5,23 @@ import java.util.Calendar;
 
 public class Account implements Serializable{
 
-    private String user, pass, fName, lName, email, phone, address;
+    private String user, pass, name, email, phone, address;
     private static int accountCount=0;
     private int ID;
     private Calendar accountOpening = Calendar.getInstance();
 
-    public Account(String u, String p, String fn, String ln, String e, String ph, String a, int id) {
+    public Account(String u, String p, String n, String e, String ph, String a, int id) {
         user = u;
         pass = p;
-        fName = fn;
-        lName = ln;
+        name = n;
         email = e;
         phone = ph;
         address = a;
         ID=id;
     }
 
-    public void setFName(String fN){
-        this.fName = fN;
-    }
-
-    public void setLName(String lN){
-        this.lName = lN;
+    public void setName(String n){
+        this.name = n;
     }
 
     public void setEmail(String e){
@@ -41,12 +36,8 @@ public class Account implements Serializable{
         this.address = a;
     }
 
-    public String getFName(){
-        return fName;
-    }
-
-    public String getLName(){
-        return lName;
+    public String getName(){
+        return name;
     }
 
     public String getEmail(){
@@ -70,7 +61,7 @@ public class Account implements Serializable{
     }
 
     public String toString() {
-        return fName + " " + lName + "\n" + email +" "+ phone + "\n" + address + "\n" +ID;
+        return name + "\n" + email +" "+ phone + "\n" + address + "\n" +ID;
     }
 
 }
