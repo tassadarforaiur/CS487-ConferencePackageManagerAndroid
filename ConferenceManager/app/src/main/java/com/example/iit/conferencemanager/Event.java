@@ -1,5 +1,6 @@
 package com.example.iit.conferencemanager;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -7,20 +8,23 @@ public class Event{
 
     private Calendar start= Calendar.getInstance();
     private Calendar end = Calendar.getInstance();
-    private String title, status="inactive", link, description, hostID, eventID;
+    private String title, status="inactive", location, description, hostID, eventID;
+    private ArrayList<Account> attendees = new ArrayList<>();
+    private ArrayList<Event> moderators = new ArrayList<>();
+    private ArrayList<Event> hosts = new ArrayList<>();
 
-    public Event(String tt, String d, int sY, int sM, int sD, int eY, int eM, int eD, double p, String l, String hID, String eID){
+    public Event(String tt, String d, int sY, int sM, int sD, int eY, int eM, int eD, String l, String hID, String eID){
         title = tt;
         description = d;
         start.set(sY, sM, sD);
         end.set(eY, eM, eD);
-        link=l;
+        location=l;
         hostID=hID;
         eventID=eID;
     }
 
     public String toString(){
-        return ""+title+"\n"+description+"\n"+link+"\n";
+        return ""+title+"\n"+description+"\n"+location+"\n";
 
     }
 
