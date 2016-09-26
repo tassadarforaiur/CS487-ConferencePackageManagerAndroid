@@ -6,7 +6,6 @@ import java.util.Calendar;
 public class Account implements Serializable{
 
     private String user, pass, name, email, phone, address;
-    private static int accountCount=0;
     private int ID;
     private Calendar accountOpening = Calendar.getInstance();
 
