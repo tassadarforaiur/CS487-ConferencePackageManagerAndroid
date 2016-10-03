@@ -1,6 +1,7 @@
 package com.example.iit.conferencemanager;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Account implements Serializable{
@@ -8,6 +9,7 @@ public class Account implements Serializable{
     private String user, pass, name, email, phone, address;
     private int ID;
     private Calendar accountOpening = Calendar.getInstance();
+    private ArrayList<Event> eventList = new ArrayList<>();
 
     public Account(String u, String p, String n, String e, String ph, String a, int id) {
         user = u;
