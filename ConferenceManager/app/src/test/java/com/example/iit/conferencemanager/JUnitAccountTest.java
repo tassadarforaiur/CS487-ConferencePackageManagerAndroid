@@ -11,7 +11,7 @@ public class JUnitAccountTest {
 
     @Before
     public void setUp()	{
-        a = new Account("aroedg", "RoegerBros123", "Andy", "Roedger", "aroedg@iit.edu", "1-(212)-664-7665", "65 Alberta Ave", 0);
+        a = new Account("aroedg", "RoegerBros123", "Andy Roedger", "aroedg@iit.edu", "1-(212)-664-7665", "65 Alberta Ave", "0");
         System.out.println("@Before - setUp");
     }
 
