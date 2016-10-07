@@ -6,6 +6,10 @@ public class Search {
 
     private String key;
 
+    public Search(){
+        key = "testKey";
+    }
+
     public Search(String k){
         key=k;
     }

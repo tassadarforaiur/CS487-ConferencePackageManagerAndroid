@@ -7,11 +7,11 @@ import java.util.Calendar;
 public class Account implements Serializable{
 
     private String user, pass, name, email, phone, address;
-    private int ID;
+    private String ID;
     private Calendar accountOpening = Calendar.getInstance();
     private ArrayList<Event> eventList = new ArrayList<>();
 
-    public Account(String u, String p, String n, String e, String ph, String a, int id) {
+    public Account(String u, String p, String n, String e, String ph, String a, String id) {
         user = u;
         pass = p;
         name = n;
@@ -53,7 +53,7 @@ public class Account implements Serializable{
         return this.address;
     }
 
-    public int getID(){
+    public String getID(){
         return ID;
     }
 
