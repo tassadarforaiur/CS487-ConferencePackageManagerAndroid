@@ -13,6 +13,18 @@ public class Event{
     private ArrayList<Event> moderators = new ArrayList<>();
     private ArrayList<Event> hosts = new ArrayList<>();
 
+    public Event(){
+        title = "TEDTalks";
+        description = "Educational";
+        start.getInstance();
+        start.add(Calendar.DATE, -3);
+        end.getInstance();
+        end.add(Calendar.DATE, 12);
+        location="IIT MTCC";
+        hostID="Teddy";
+        eventID="eTED";
+    }
+
     public Event(String tt, String d, int sY, int sM, int sD, int eY, int eM, int eD, String l, String hID, String eID){
         title = tt;
         description = d;
@@ -29,7 +41,7 @@ public class Event{
     }
 
     //Takes the difference in Milliseconds(start-current)
-    public void beginListing(Calendar cal) {
+    public void beginEvent(Calendar cal) {
         if(cal.compareTo(start)>0){
             status="active";
         }else{
@@ -38,7 +50,7 @@ public class Event{
     }
 
     //Takes the difference in Milliseconds(current-end)
-    public void endListing(Calendar cal) {
+    public void endEvent(Calendar cal) {
         if(end.compareTo(cal)<0){
             status="inactive";
         }else{
