@@ -18,4 +18,5 @@
         completions."
     </string>
     <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_splash__screen">Splash_Screen</string>
 </resources>

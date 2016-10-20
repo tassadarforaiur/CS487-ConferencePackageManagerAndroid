@@ -28,6 +28,10 @@
         <activity
             android:name=".Signup"
             android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Splash_Screen"
+            android:label="@string/title_activity_splash__screen"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
