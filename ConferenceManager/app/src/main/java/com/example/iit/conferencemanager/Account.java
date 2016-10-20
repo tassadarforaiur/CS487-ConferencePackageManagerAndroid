@@ -18,7 +18,7 @@ public class Account implements Serializable{
         email = e;
         phone = ph;
         address = a;
-        ID=id;
+        //ID=id; #solely backend's data. never seen on frontend
     }
 
     public void setName(String n){
@@ -53,9 +53,11 @@ public class Account implements Serializable{
         return this.address;
     }
 
+    /*
     public String getID(){
         return ID;
     }
+    */
 
     public Calendar getAccountOpening(){
         return accountOpening;
