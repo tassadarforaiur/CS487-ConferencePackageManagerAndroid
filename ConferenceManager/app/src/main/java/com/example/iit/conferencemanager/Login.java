@@ -17,14 +17,13 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
     Account PlaceHolder;
 
     public void sendMessage(View view) {
         Intent intent = new Intent(Login.this, HttpPost.class);
-        EditText ETEmail = (EditText) findViewById(R.id.editText);
+        EditText ETEmail = (EditText) findViewById(R.id.editText1);
         EditText ETPass = (EditText) findViewById(R.id.editText2);
         PlaceHolder.setUser(ETEmail.getText().toString());
         PlaceHolder.setUser(ETPass.getText().toString());
@@ -33,7 +32,7 @@ public class Login extends AppCompatActivity {
         String temp = PlaceHolder.getUser();
         String username = "username";
         intent.putExtra(temp, username);
-        startActivity(intent);
+        //startActivity(intent);
         Intent intent1 = new Intent(Login.this, Splash_Screen.class);
         startActivity(intent1);
 

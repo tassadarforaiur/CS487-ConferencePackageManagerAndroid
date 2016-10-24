@@ -18,10 +18,12 @@ public class Signup extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
-    Account PlaceHolder;
+    Account PlaceHolder = new Account("","","","","","");
+    HttpPost poster = new HttpPost();
 
     public void sendMessage(View view) {
-        Intent intent = new Intent(Signup.this, HttpPost.class);
+        Intent intent = new Intent(Signup.this, Splash_Screen.class);
+        //Intent intent = new Intent(Signup.this, HttpPost.class);
         EditText ETUser = (EditText) findViewById(R.id.editText4);
         EditText ETEmail = (EditText) findViewById(R.id.editText5);
         EditText ETPass = (EditText) findViewById(R.id.editText6);
@@ -39,12 +41,12 @@ public class Signup extends AppCompatActivity {
         PlaceHolder.setUser(ETAddr.getText().toString());
         //intent.putExtra(PlaceHolder);
         //to satisfy string requirement, to remove later.
-            String temp = PlaceHolder.getUser();
-            String username = "username";
-            intent.putExtra(temp, username);
-            startActivity(intent);
-        Intent intent1 = new Intent(Signup.this, Splash_Screen.class);
-        startActivity(intent1);
+            //String temp = PlaceHolder.getUser();
+           // String username = "username";
+           // intent.putExtra(temp, username);
+           // startActivity(intent);
+        //poster.doInBackground(PlaceHolder.getEmail());
+        startActivity(intent);
 
     }
 }
