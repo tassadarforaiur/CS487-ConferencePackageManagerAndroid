@@ -58,8 +58,24 @@ public class Event{
         }
     }
 
+    public String getTitle(){
+        return this.title;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
+
+    public String getLocation(){
+        return this.getLocation();
+    }
+
     public Calendar getStart(){
         return this.start;
+    }
+
+    public Calendar getEnd(){
+        return this.end;
     }
 
     public String getStatus(){

@@ -6,19 +6,31 @@ import java.util.Calendar;
 
 public class Account implements Serializable{
 
-    private String user, pass, name, email, phone, address;
-    private String ID;
+
+    private String user;
+    private String pass;
+    private String name;
+    private String email;
+    private String phone;
+    private String address;
     private Calendar accountOpening = Calendar.getInstance();
     private ArrayList<Event> eventList = new ArrayList<>();
 
-    public Account(String u, String p, String n, String e, String ph, String a, String id) {
+    public Account(String u, String p, String n, String e, String ph, String a) {
         user = u;
         pass = p;
         name = n;
         email = e;
         phone = ph;
         address = a;
-        //ID=id; #solely backend's data. never seen on frontend
+    }
+
+    public void setUser(String u) {
+        this.user = user;
+    }
+
+    public void setPass(String p) {
+        this.pass = pass;
     }
 
     public void setName(String n){
@@ -37,8 +49,16 @@ public class Account implements Serializable{
         this.address = a;
     }
 
+    public String getUser(){
+        return this.user;
+    }
+
+    public String getPass(){
+        return this.pass;
+    }
+
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public String getEmail(){
@@ -53,18 +73,12 @@ public class Account implements Serializable{
         return this.address;
     }
 
-    /*
-    public String getID(){
-        return ID;
-    }
-    */
-
     public Calendar getAccountOpening(){
-        return accountOpening;
+        return this.accountOpening;
     }
 
     public String toString() {
-        return name + "\n" + email +" "+ phone + "\n" + address + "\n" +ID;
+        return name + "\n" + email +" "+ phone + "\n" + address;
     }
 
 }
