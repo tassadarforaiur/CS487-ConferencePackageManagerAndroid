@@ -13,6 +13,14 @@ public class Event{
     private ArrayList<Event> moderators = new ArrayList<>();
     private ArrayList<Event> hosts = new ArrayList<>();
 
+    public Event(String t, String d, String l){
+        title = "TEDTalks";
+        description = "Educational";
+        location="IIT MTCC";
+        hostID="Teddy";
+        eventID="eTED";
+    }
+
     public Event(){
         title = "TEDTalks";
         description = "Educational";
@@ -25,7 +33,7 @@ public class Event{
         eventID="eTED";
     }
 
-    public Event(String tt, String d, int sY, int sM, int sD, int eY, int eM, int eD, String l, String hID, String eID){
+    public Event(String tt, String d, int sY, int sM, int sD, int eY, int eM, int eD, String l,String hID, String eID){
         title = tt;
         description = d;
         start.set(sY, sM, sD);
