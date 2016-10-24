@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMessage(View view)
     {
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, Signup.class);
         startActivity(intent);
     }
 }
