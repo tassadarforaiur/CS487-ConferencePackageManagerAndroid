@@ -7,7 +7,6 @@ public class JSONConverter {
 
     public static String toJSON(Account a){
 
-
         try {
             JSONObject accObj = new JSONObject();
             accObj.put("user", a.getUser());
