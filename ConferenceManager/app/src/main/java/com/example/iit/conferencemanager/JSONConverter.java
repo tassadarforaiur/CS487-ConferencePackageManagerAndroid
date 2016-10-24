@@ -3,7 +3,7 @@ package com.example.iit.conferencemanager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class JSONConverter {
+public class    JSONConverter {
 
     private String title, start, end, location, description;
 
