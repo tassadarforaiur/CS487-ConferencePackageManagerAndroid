@@ -17,6 +17,15 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /*
+        * btnHit.setOnClickListener(new View.OnClickListener(){
+        *   @Override
+        *   public void onClick(View v){
+        *       new JSONConverter().execute("Our desired URL");
+        *   }
+        * });
+        * */
     }
     Account PlaceHolder;
 
