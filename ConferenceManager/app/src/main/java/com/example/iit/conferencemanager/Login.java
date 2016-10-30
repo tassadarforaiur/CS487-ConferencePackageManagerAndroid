@@ -18,6 +18,14 @@ public class Login extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        /*
+        * btnHit.setOnClickListener(new View.OnClickListener(){
+        *   @Override
+        *   public void onClick(View v){
+        *       new HttpGet().execute("Our desired URL");//this invokes get because
+        *   }
+        * });
+        * */
     }
 
     Account PlaceHolder;

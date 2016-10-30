@@ -22,7 +22,7 @@ public class Signup extends AppCompatActivity {
         * btnHit.setOnClickListener(new View.OnClickListener(){
         *   @Override
         *   public void onClick(View v){
-        *       new JSONConverter().execute("Our desired URL");
+        *       new HttpPost().execute("Our desired URL");//This invokes post because the server is being updated with a new account
         *   }
         * });
         * */

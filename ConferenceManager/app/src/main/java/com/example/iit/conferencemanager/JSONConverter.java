@@ -35,7 +35,6 @@ public class    JSONConverter {
 
     public static String toJSONEvent(Event ev){
 
-
         try {
             JSONObject accObj = new JSONObject();
             accObj.put("title", ev.getTitle());
