@@ -17,6 +17,15 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /*
+        * btnHit.setOnClickListener(new View.OnClickListener(){
+        *   @Override
+        *   public void onClick(View v){
+        *       new HttpPost().execute("Our desired URL");//This invokes post because the server is being updated with a new account
+        *   }
+        * });
+        * */
     }
     Account PlaceHolder = new Account("","","","","","");
     HttpPost poster = new HttpPost();
