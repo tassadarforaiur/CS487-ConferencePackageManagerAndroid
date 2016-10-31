@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
         * btnHit.setOnClickListener(new View.OnClickListener(){
         *   @Override
         *   public void onClick(View v){
-        *       new HttpGet().execute("Our desired URL");//this invokes get because
+        *       new HttpGet().execute("Our desired URL");//this invokes get because the serve does not need to be updated.
         *   }
         * });
         * */
@@ -54,6 +54,7 @@ public class Login extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
+        new HttpGet().execute("Our desired URL");//this invokes get because the serve does not need to be updated. Data already on the server from signup just needs to be retrieved.
     }
 
     Account PlaceHolder;
