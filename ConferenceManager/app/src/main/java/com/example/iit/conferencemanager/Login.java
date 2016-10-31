@@ -16,11 +16,14 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class Login extends AppCompatActivity {
 
     @Override
+    GoogleApiClient mGoogleApiClient;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        findViewById(R.id.sign_in_button).setOnClickListener(this);
+
 
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
@@ -60,7 +63,7 @@ public class Login extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
         new HttpGet().execute("Our desired URL");//this invokes get because the serve does not need to be updated. Data already on the server from signup just needs to be retrieved.
     }
-
+/*  temporarily disabled
     Account PlaceHolder;
 
     public void sendMessage(View view) {
@@ -79,7 +82,7 @@ public class Login extends AppCompatActivity {
         startActivity(intent1);
 
     }
-
+*/
 
 
 }
