@@ -44,5 +44,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
         android:onClick="sendMessage"
-        android:id="@+id/button5" />
+        android:id="@+id/sign_in_button" />
 </RelativeLayout>

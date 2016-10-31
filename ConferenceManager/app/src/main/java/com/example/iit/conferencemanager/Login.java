@@ -9,6 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 public class Login extends AppCompatActivity {
 
     @Override
@@ -61,7 +65,7 @@ public class Login extends AppCompatActivity {
 
     public void sendMessage(View view) {
         Intent intent = new Intent(Login.this, HttpPost.class);
-        EditText ETEmail = (EditText) findViewById(R.id.editText);
+        EditText ETEmail = (EditText) findViewById(R.id.editText1);
         EditText ETPass = (EditText) findViewById(R.id.editText2);
         PlaceHolder.setUser(ETEmail.getText().toString());
         PlaceHolder.setUser(ETPass.getText().toString());
