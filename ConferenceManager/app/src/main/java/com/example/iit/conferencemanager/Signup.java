@@ -31,8 +31,8 @@ public class Signup extends AppCompatActivity {
     HttpPost poster = new HttpPost();
 
     public void sendMessage(View view) {
-        Intent intent = new Intent(Signup.this, Splash_Screen.class);
-        //Intent intent = new Intent(Signup.this, HttpPost.class);
+        //Intent intent = new Intent(Signup.this, Splash_Screen.class);
+        Intent intent = new Intent(Signup.this, HttpPost.class);
         EditText ETUser = (EditText) findViewById(R.id.editText4);
         EditText ETEmail = (EditText) findViewById(R.id.editText5);
         EditText ETPass = (EditText) findViewById(R.id.editText6);
