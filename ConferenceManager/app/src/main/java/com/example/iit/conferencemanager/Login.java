@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-        new HttpGet().execute("mongodb://loScalhost:27017/cpm");//this invokes get because the serve does not need to be updated. Data already on the server from signup just needs to be retrieved.
+        new HttpGet().execute();//this invokes get because the serve does not need to be updated. Data already on the server from signup just needs to be retrieved.
     }
 
     @Override

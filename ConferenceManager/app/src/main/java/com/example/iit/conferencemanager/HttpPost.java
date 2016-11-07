@@ -30,7 +30,12 @@ public class HttpPost extends AsyncTask<String, Void, String> {
         BufferedReader reader = null;
 
         try{
-            URL url = new URL("mongodb://loScalhost:27017/cpm");
+            URL url = null;
+            try {
+                url = new URL(IP + Port + params[0]);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setDoOutput(true);
             urlConnection.setRequestMethod("POST");
