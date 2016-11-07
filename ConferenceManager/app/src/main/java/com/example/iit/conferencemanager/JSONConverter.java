@@ -3,6 +3,11 @@ package com.example.iit.conferencemanager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class    JSONConverter {
 
     private String title, start, end, location, description;
@@ -13,6 +18,7 @@ public class    JSONConverter {
     private String email;
     private String phone;
     private String address;
+    private DateFormat df = new SimpleDateFormat("EEE MMM dd kk:mm:ss zzz yyyy");
 
     public static String toJSONAccount(Account a){
 
@@ -25,6 +31,7 @@ public class    JSONConverter {
             accObj.put("phone", a.getPhone());
             accObj.put("address", a.getAddress());
             accObj.put("googleID", a.getGoogleID());
+            accObj.put("date", a.getAccountOpening().toString());
 
             return accObj.toString();
         } catch (JSONException e) {
@@ -88,13 +95,18 @@ public class    JSONConverter {
             phone=accObj.getString("phone");
             address=accObj.getString("address");
 
+            Date result =  df.parse(accObj.getString("date"));
+
             tempAcc = new Account(user,pass,name,email,phone,address);
 
             tempAcc.setGoogleID(accObj.getString("googleID"));
+            tempAcc.setAccountOpening(result);
 
             return tempAcc;
 
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
             e.printStackTrace();
         }
 
