@@ -31,6 +31,7 @@ public class    JSONConverter {
             accObj.put("phone", a.getPhone());
             accObj.put("address", a.getAddress());
             accObj.put("googleID", a.getGoogleID());
+            accObj.put("date", a.getAccountOpening().toString());
 
             return accObj.toString();
         } catch (JSONException e) {
