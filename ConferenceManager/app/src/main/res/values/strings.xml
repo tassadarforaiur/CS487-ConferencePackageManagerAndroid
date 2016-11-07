@@ -19,4 +19,5 @@
     </string>
     <string name="title_activity_signup">Signup</string>
     <string name="title_activity_splash__screen">Splash_Screen</string>
+    <string name="title_activity_sign_in">Sign in</string>
 </resources>

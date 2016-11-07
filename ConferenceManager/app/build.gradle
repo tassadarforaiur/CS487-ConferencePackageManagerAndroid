@@ -18,6 +18,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            java {
+                exclude '**/Login.java'
+                exclude '**/Sign_in.java'
+
+            }
+        }
+        androidTest {
+            java {
+                exclude '**/Login.java'
+                exclude '**/Sign_in.java'
+
+            }
+        }
+    }
 }
 
 dependencies {
