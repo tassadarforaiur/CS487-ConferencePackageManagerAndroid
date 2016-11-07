@@ -43,10 +43,15 @@ public class HttpGet extends AsyncTask<String, String, String> {
         //URL url = new URL(IP+Port+After);
         URL url = null;
         try {
-            url = new URL(params[0]);
+            url = new URL("mongodb://loScalhost:27017/cpm");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        /*try {
+            url = new URL(params[0]);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }*/
         InputStream iStream = null;
         try {
             iStream = url.openStream();
