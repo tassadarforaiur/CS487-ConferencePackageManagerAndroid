@@ -3,6 +3,7 @@ package com.example.iit.conferencemanager;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Account implements Serializable{
 
@@ -81,6 +82,10 @@ public class Account implements Serializable{
 
     public String getGoogleID() {
         return googleID;
+    }
+
+    public void setAccountOpening(Date d){
+        accountOpening.setTime(d);
     }
 
     public Calendar getAccountOpening(){
