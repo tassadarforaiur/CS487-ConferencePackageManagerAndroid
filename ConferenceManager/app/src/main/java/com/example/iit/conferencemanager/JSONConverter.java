@@ -24,6 +24,7 @@ public class    JSONConverter {
             accObj.put("name", a.getName());
             accObj.put("phone", a.getPhone());
             accObj.put("address", a.getAddress());
+            accObj.put("googleID", a.getGoogleID());
 
             return accObj.toString();
         } catch (JSONException e) {
@@ -88,6 +89,8 @@ public class    JSONConverter {
             address=accObj.getString("address");
 
             tempAcc = new Account(user,pass,name,email,phone,address);
+
+            tempAcc.setGoogleID(accObj.getString("googleID"));
 
             return tempAcc;
 

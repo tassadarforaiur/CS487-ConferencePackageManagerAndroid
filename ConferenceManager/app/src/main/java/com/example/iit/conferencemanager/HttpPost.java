@@ -18,7 +18,7 @@ public class HttpPost extends AsyncTask<String, Void, String> {
 
     private String IP = "http://162.243.86.227";
     private String Port = ":4870";
-    private String After = "/test";
+    private String After = "/login";
 
     @Override
     protected String doInBackground(String... params) {
@@ -32,7 +32,7 @@ public class HttpPost extends AsyncTask<String, Void, String> {
         try{
             URL url = null;
             try {
-                url = new URL(IP + Port + params[0]);
+                url = new URL(IP + Port + After);//params[0]);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

@@ -16,6 +16,8 @@ public class Account implements Serializable{
     private Calendar accountOpening = Calendar.getInstance();
     private ArrayList<Event> eventList = new ArrayList<>();
 
+    private String googleID;
+
     public Account(String u, String p, String n, String e, String ph, String a) {
         user = u;
         pass = p;
@@ -49,6 +51,10 @@ public class Account implements Serializable{
         this.address = a;
     }
 
+    public void setGoogleID(String googleID) {
+        this.googleID = googleID;
+    }
+
     public String getUser(){
         return this.user;
     }
@@ -71,6 +77,10 @@ public class Account implements Serializable{
 
     public String getAddress(){
         return this.address;
+    }
+
+    public String getGoogleID() {
+        return googleID;
     }
 
     public Calendar getAccountOpening(){
