@@ -17,6 +17,8 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class Login extends AppCompatActivity implements View.OnClickListener{
+    private static final String TAG = "Login";
+
     GoogleApiClient mGoogleApiClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
