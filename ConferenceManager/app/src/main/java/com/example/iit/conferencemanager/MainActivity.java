@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sendMessage1(View view)
     {
-        Intent intent = new Intent(MainActivity.this, Sign_in.class);
+        Intent intent = new Intent(MainActivity.this, googleLogin.class);
         startActivity(intent);
     }
 
