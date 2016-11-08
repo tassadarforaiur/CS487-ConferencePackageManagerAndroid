@@ -65,7 +65,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-        new HttpGet().execute();//this invokes get because the serve does not need to be updated. Data already on the server from signup just needs to be retrieved.
     }
 
     @Override
@@ -85,6 +84,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
             //mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));//This is an optional/suggested String to choose to display
+            new HttpPost().execute(acct.getId());//this invokes get? because the serve does not need to be updated. Data already on the server from signup just needs to be retrieved.
             updateUI(true);
         } else {
             // Signed out, show unauthenticated UI.

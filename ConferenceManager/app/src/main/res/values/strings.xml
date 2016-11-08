@@ -21,6 +21,6 @@
     <string name="title_activity_splash__screen">Splash_Screen</string>
     <string name="title_activity_sign_in">Sign in</string>
     <string name="loading" />
-    <string name="signed_in_fmt" />
+    <string name="signed_in_fmt">Signed in as: %s</string>
     <string name="signed_out" />
 </resources>
