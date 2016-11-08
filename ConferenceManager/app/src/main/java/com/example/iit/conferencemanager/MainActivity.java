@@ -16,8 +16,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    GoogleApiClient mGoogleApiClient;
-    private TextView mStatusTextView;
 
 
     @Override
